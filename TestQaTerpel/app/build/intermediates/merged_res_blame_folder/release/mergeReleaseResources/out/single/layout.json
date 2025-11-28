@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_register_step2.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_register_step2.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_register.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_otp.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_otp.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_welcome.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_welcome.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_home.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/activity_main.xml",
+        "source": "com.terpel.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/item_welcome_page.xml",
+        "source": "com.terpel.app-main-50:/layout/item_welcome_page.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_register_step3.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_register_step3.xml"
+    },
+    {
+        "merged": "com.terpel.app-mergeReleaseResources-48:/layout/fragment_login.xml",
+        "source": "com.terpel.app-main-50:/layout/fragment_login.xml"
+    }
+]

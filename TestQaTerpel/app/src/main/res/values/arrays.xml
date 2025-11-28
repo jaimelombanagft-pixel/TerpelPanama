@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="doc_types">
+        <item>CN</item>
+        <item>CE</item>
+        <item>PA</item>
+    </string-array>
+</resources>

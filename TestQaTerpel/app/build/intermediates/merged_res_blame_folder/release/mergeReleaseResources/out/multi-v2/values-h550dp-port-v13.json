@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.terpel.app-mergeReleaseResources-47:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/jaimelombana/.gradle/caches/9.0-milestone-1/transforms/fb194548da4d0036f91da30cc0c06adf/transformed/material-1.12.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "64",
+                        "endOffsets": "115"
+                    }
+                }
+            ]
+        }
+    ]
+}

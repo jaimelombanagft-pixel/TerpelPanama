@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.terpel.app.ui.welcome.WelcomeFragment"
+        android:label="Bienvenido">
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/loginFragment"/>
+        <action
+            android:id="@+id/action_welcome_to_register"
+            app:destination="@id/registerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.terpel.app.ui.login.LoginFragment"
+        android:label="Login"/>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.terpel.app.ui.register.RegisterFragment"
+        android:label="Registro">
+        <action
+            android:id="@+id/action_register_to_step2"
+            app:destination="@id/registerStep2Fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerStep2Fragment"
+        android:name="com.terpel.app.ui.register.RegisterStep2Fragment"
+        android:label="Registro Paso 2">
+        <action
+            android:id="@+id/action_registerStep2_to_step3"
+            app:destination="@id/registerStep3Fragment"/>
+        <action
+            android:id="@+id/action_registerStep2_to_otp"
+            app:destination="@id/otpFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerStep3Fragment"
+        android:name="com.terpel.app.ui.register.RegisterStep3Fragment"
+        android:label="Registro2">
+        <action
+            android:id="@+id/action_registerStep3_to_otp"
+            app:destination="@id/otpFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.terpel.app.ui.otp.OtpFragment"
+        android:label="OTP" >
+        <action
+            android:id="@+id/action_otp_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.terpel.app.ui.home.HomeFragment"
+        android:label="Home"/>
+
+</navigation>
