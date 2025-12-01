@@ -5,17 +5,22 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.delay
+import com.terpel.app.data.model.RegisterResponse
+import com.terpel.app.data.repository.RegisterRepository
 import kotlinx.coroutines.launch
 
 data class RegisterFormState(
     val fullName: String = "",
+    val lastName: String = "",
     val email: String = "",
     val document: String = "",
     val phone: String = "",
     val password: String = "",
     val confirmPassword: String = "",
+    val vehicleType: String = "",
+    val documentType: String = "CC",
     val nameError: String? = null,
+    val lastNameError: String? = null,
     val emailError: String? = null,
     val documentError: String? = null,
     val phoneError: String? = null,
@@ -23,15 +28,23 @@ data class RegisterFormState(
     val confirmError: String? = null,
     val isValid: Boolean = false,
     val isLoading: Boolean = false,
-    val isSuccess: Boolean = false
+    val isSuccess: Boolean = false,
+    val errorMessage: String? = null,
+    val registrationResponse: RegisterResponse? = null
 )
 
 class RegisterViewModel : ViewModel() {
     private val _state = MutableLiveData(RegisterFormState())
     val state: LiveData<RegisterFormState> = _state
 
+    private val repository = RegisterRepository()
+
     fun onNameChanged(value: String) {
         updateAndValidate(_state.value!!.copy(fullName = value))
+    }
+
+    fun onLastNameChanged(value: String) {
+        _state.value = _state.value!!.copy(lastName = value)
     }
 
     fun onEmailChanged(value: String) {
@@ -44,6 +57,14 @@ class RegisterViewModel : ViewModel() {
 
     fun onPhoneChanged(value: String) {
         _state.value = _state.value!!.copy(phone = value)
+    }
+
+    fun onDocumentTypeChanged(value: String) {
+        _state.value = _state.value!!.copy(documentType = value)
+    }
+
+    fun onVehicleTypeChanged(value: String) {
+        _state.value = _state.value!!.copy(vehicleType = value)
     }
 
     fun onPasswordChanged(value: String) {
@@ -74,13 +95,43 @@ class RegisterViewModel : ViewModel() {
         )
     }
 
-    fun submit() {
+    fun registerUser() {
         val s = _state.value ?: return
-        if (!s.isValid || s.isLoading) return
-        _state.value = s.copy(isLoading = true, isSuccess = false)
+        _state.value = s.copy(isLoading = true, errorMessage = null)
+        
         viewModelScope.launch {
-            delay(1500)
-            _state.value = _state.value!!.copy(isLoading = false, isSuccess = true)
+            android.util.Log.d("RegisterViewModel", "Iniciando registro con datos: fullName=${s.fullName}, email=${s.email}, vehicleType=${s.vehicleType}")
+            
+            val result = repository.registerUser(
+                firstName = s.fullName,
+                lastName = s.lastName,
+                documentType = s.documentType,
+                document = s.document,
+                cellPhone = s.phone,
+                email = s.email,
+                vehicleType = s.vehicleType
+            )
+            
+            result.onSuccess { response ->
+                android.util.Log.d("RegisterViewModel", "Registro exitoso: ${response.message}")
+                _state.value = _state.value!!.copy(
+                    isLoading = false,
+                    isSuccess = true,
+                    registrationResponse = response,
+                    errorMessage = null
+                )
+            }
+            
+            result.onFailure { error ->
+                val errorMsg = error.message ?: "Error desconocido durante el registro"
+                android.util.Log.e("RegisterViewModel", "Error en registro: $errorMsg", error)
+                _state.value = _state.value!!.copy(
+                    isLoading = false,
+                    isSuccess = false,
+                    errorMessage = errorMsg
+                )
+            }
         }
     }
 }
+

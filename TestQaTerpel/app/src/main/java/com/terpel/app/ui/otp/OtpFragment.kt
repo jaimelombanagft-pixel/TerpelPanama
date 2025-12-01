@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.transition.MaterialSharedAxis
 import com.terpel.app.R
 import com.terpel.app.databinding.FragmentOtpBinding
+import coil.load
 
 class OtpFragment : Fragment() {
     private var _binding: FragmentOtpBinding? = null
@@ -33,6 +34,13 @@ class OtpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        // Load header image
+        binding.headerImage.load("https://www.terpelpanama.com/images/linea-lubricantes-h.png") {
+            crossfade(true)
+            placeholder(R.drawable.ic_terpel_placeholder)
+        }
+        
         binding.otpEditText.filters = arrayOf(InputFilter.LengthFilter(6))
         binding.otpEditText.doOnTextChanged { text, _, _, _ ->
             binding.btnVerify.isEnabled = (text?.length ?: 0) == 6
@@ -45,10 +53,19 @@ class OtpFragment : Fragment() {
             binding.btnResend.isEnabled = can
         }
         viewModel.verified.observe(viewLifecycleOwner) { ok ->
-            if (ok) findNavController().navigate(R.id.action_otp_to_home)
-            else Snackbar.make(binding.root, "Código inválido", Snackbar.LENGTH_SHORT).show()
+            if (ok) {
+                binding.btnVerify.visibility = View.GONE
+                binding.progressOtp.visibility = View.VISIBLE
+                findNavController().navigate(R.id.action_otp_to_home)
+            } else {
+                Snackbar.make(binding.root, "Código inválido", Snackbar.LENGTH_SHORT).show()
+                binding.btnVerify.visibility = View.VISIBLE
+                binding.progressOtp.visibility = View.GONE
+            }
         }
         binding.btnVerify.setOnClickListener {
+            binding.btnVerify.visibility = View.GONE
+            binding.progressOtp.visibility = View.VISIBLE
             viewModel.verify(binding.otpEditText.text?.toString().orEmpty())
         }
         binding.btnResend.setOnClickListener {
@@ -62,4 +79,3 @@ class OtpFragment : Fragment() {
         super.onDestroyView()
     }
 }
-

@@ -4,7 +4,7 @@
             "outputFile": "com.terpel.app-mergeDebugResources-48:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/jaimelombana/.gradle/caches/9.0-milestone-1/transforms/ddda88b5e5e6bcb2df7887c84271dcf3/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/mevp/.gradle/caches/9.0-milestone-1/transforms/ddda88b5e5e6bcb2df7887c84271dcf3/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/jaimelombana/.gradle/caches/9.0-milestone-1/transforms/fb194548da4d0036f91da30cc0c06adf/transformed/material-1.12.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/mevp/.gradle/caches/9.0-milestone-1/transforms/fb194548da4d0036f91da30cc0c06adf/transformed/material-1.12.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/Users/jaimelombana/.gradle/caches/9.0-milestone-1/transforms/fb930a7a5f3697c2bf438579eb29218d/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/mevp/.gradle/caches/9.0-milestone-1/transforms/fb930a7a5f3697c2bf438579eb29218d/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

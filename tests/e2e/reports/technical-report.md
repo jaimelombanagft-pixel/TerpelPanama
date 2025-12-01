@@ -1,0 +1,389 @@
+# Reporte Técnico de Pruebas E2E
+
+## Configuración del entorno
+- Appium con UiAutomator2
+- Dispositivo/emulador Android con app `com.terpel.app`
+- Backend en `http://localhost:3000/services/apexrest/` (emulador: `http://10.0.2.2:3000`)
+
+## Casos de prueba ejecutados
+- Campos obligatorios vacíos muestran errores: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Términos y condiciones no aceptados (Paso 2): passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Campos obligatorios vacíos muestran errores: passed
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: passed
+- Email inválido y Términos no aceptados: passed
+- Campos obligatorios vacíos muestran errores: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Términos y condiciones no aceptados (Paso 2): passed
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Términos y condiciones no aceptados (Paso 2): passed
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Campos obligatorios vacíos muestran errores: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- Email inválido y Términos no aceptados: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Campos obligatorios vacíos muestran errores: passed
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: passed
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- Email inválido y Términos no aceptados: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: passed
+- Email inválido y Términos no aceptados: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Valida campos y envía datos a /services/apexrest/ClientManagement/v2/: broken
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: broken
+- Términos y condiciones no aceptados (Paso 2): passed
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: broken
+- No acepta términos en paso 3: broken
+- Campos obligatorios vacíos muestran errores: passed
+- No acepta términos en paso 3: broken
+- Email inválido y Términos no aceptados: broken
+- Campos obligatorios vacíos muestran errores: passed
+
+## Resultados y estadísticas
+- Total: 105
+- Passed: 25
+- Failed: 0
+- Broken: 80
+- Skipped: 0
+
+## Evidencias de pantalla
+- artifacts/screenshots/1764546720288-Campos_obligatorios_vacíos_muestran_errores.png
+- artifacts/screenshots/1764546737177-Campos_obligatorios_vacíos_muestran_errores.png
+- artifacts/screenshots/1764546749431-step2-email-invalido.png
+- artifacts/screenshots/1764546755093-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764546756627-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764546769889-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764546782818-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764546805659-Campos_obligatorios_vacíos_muestran_errores.png
+- artifacts/screenshots/1764546822176-Campos_obligatorios_vacíos_muestran_errores.png
+- artifacts/screenshots/1764546823744-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764546825159-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764546838112-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764546852207-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764546975826-step1-invalid.png
+- artifacts/screenshots/1764546988320-step2-email-invalido.png
+- artifacts/screenshots/1764546993987-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764546995626-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547007886-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547021567-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547035797-step1-invalid.png
+- artifacts/screenshots/1764547048132-step2-email-invalido.png
+- artifacts/screenshots/1764547053772-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547055317-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547068010-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547081029-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547107209-registro-exitoso.png
+- artifacts/screenshots/1764547168159-registro-exitoso.png
+- artifacts/screenshots/1764547266757-step1-invalid.png
+- artifacts/screenshots/1764547279124-step2-email-invalido.png
+- artifacts/screenshots/1764547284775-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547286349-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547299544-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547313186-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547327112-step1-invalid.png
+- artifacts/screenshots/1764547339474-step2-email-invalido.png
+- artifacts/screenshots/1764547345097-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547346638-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764547359686-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547373355-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764547399302-registro-exitoso.png
+- artifacts/screenshots/1764547465450-registro-exitoso.png
+- artifacts/screenshots/1764547931508-step1-invalid.png
+- artifacts/screenshots/1764547991139-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548035348-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548074782-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548115235-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548187334-step1-invalid.png
+- artifacts/screenshots/1764548237309-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548276656-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548299809-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548322378-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548578649-step1-invalid.png
+- artifacts/screenshots/1764548606298-step2-email-invalido.png
+- artifacts/screenshots/1764548626633-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548654465-step2-email-invalido.png
+- artifacts/screenshots/1764548674769-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548698514-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548722645-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548744560-step1-invalid.png
+- artifacts/screenshots/1764548772716-step2-email-invalido.png
+- artifacts/screenshots/1764548793040-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548820184-step2-email-invalido.png
+- artifacts/screenshots/1764548840464-Email_inválido_y_Términos_no_aceptados.png
+- artifacts/screenshots/1764548864201-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764548888230-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764549156767-step1-invalid.png
+- artifacts/screenshots/1764549185026-step2-email-invalido.png
+- artifacts/screenshots/1764549233605-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764549282216-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764549303076-step1-invalid.png
+- artifacts/screenshots/1764549331376-step2-email-invalido.png
+- artifacts/screenshots/1764549379654-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764549427567-No_acepta_términos_en_paso_3.png
+- artifacts/screenshots/1764549809527-step1-invalid.png
+- artifacts/screenshots/1764549839178-step2-email-invalido.png
+- artifacts/screenshots/1764549860771-step2-terminos-no-aceptados.png
+- artifacts/screenshots/1764549900339-registro-exitoso.png
+- artifacts/screenshots/1764549951596-registro-exitoso.png
+- artifacts/screenshots/1764550010306-registro-exitoso.png
+- artifacts/screenshots/1764550197872-step1-invalid.png
+- artifacts/screenshots/1764550226859-step2-email-invalido.png
+- artifacts/screenshots/1764550248591-step2-terminos-no-aceptados.png
+- artifacts/screenshots/1764550288649-registro-exitoso.png
+- artifacts/screenshots/1764550308938-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.png
+- artifacts/screenshots/1764550341085-registro-exitoso.png
+- artifacts/screenshots/1764550361365-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.png
+- artifacts/screenshots/1764550400688-registro-exitoso.png
+- artifacts/screenshots/1764550420856-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.png
+- artifacts/screenshots/1764550453326-registro-exitoso.png
+- artifacts/screenshots/1764550473062-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.png
+- artifacts/screenshots/1764550508781-step1-invalid.png
+- artifacts/screenshots/1764550538281-step2-email-invalido.png
+- artifacts/screenshots/1764550559847-step2-terminos-no-aceptados.png
+- artifacts/screenshots/1764550618347-step1-invalid.png
+- artifacts/screenshots/1764550647801-step2-email-invalido.png
+- artifacts/screenshots/1764550669856-step2-terminos-no-aceptados.png
+- artifacts/screenshots/1764550709754-registro-exitoso.png
+
+## Videos de ejecución
+- artifacts/videos/1764546721704-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764546738401-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764546756077-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764546757469-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764546770781-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764546783730-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764546806720-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764546823172-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764546824601-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764546826035-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764546839096-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764546853116-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764546977259-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764546994993-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764546996502-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547008860-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547022526-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547037071-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764547054733-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547056195-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547068918-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547082055-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547109093-registro-exitoso.mp4
+- artifacts/videos/1764547169971-registro-exitoso.mp4
+- artifacts/videos/1764547268017-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764547285763-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547287211-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547300447-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547314116-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547328368-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764547346017-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547347500-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764547360587-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547374243-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764547401108-registro-exitoso.mp4
+- artifacts/videos/1764547467188-registro-exitoso.mp4
+- artifacts/videos/1764547954682-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764548000599-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548039991-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548079285-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548120899-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548204702-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764548245868-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548278485-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548301091-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548323621-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548580121-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764548627739-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548675988-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548699863-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548723911-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548745987-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764548794181-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548841563-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764548865515-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764548889548-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764549158191-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764549186397-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764549234716-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764549283337-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764549304570-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764549332701-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764549380802-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764549428712-No_acepta_términos_en_paso_3.mp4
+- artifacts/videos/1764549811037-Campos_obligatorios_vacíos_muestran_errores.mp4
+- artifacts/videos/1764549840826-Email_inválido_y_Términos_no_aceptados.mp4
+- artifacts/videos/1764549861840-Términos_y_condiciones_no_aceptados_(Paso_2).mp4
+- artifacts/videos/1764549902113-registro-exitoso.mp4
+- artifacts/videos/1764549953469-registro-exitoso.mp4
+- artifacts/videos/1764550012091-registro-exitoso.mp4
+- artifacts/videos/1764550199251-Campos_obligatorios_vac_os_muestran_errores.mp4
+- artifacts/videos/1764550228512-Email_inv_lido_y_T_rminos_no_aceptados.mp4
+- artifacts/videos/1764550249791-T_rminos_y_condiciones_no_aceptados_Paso_2_.mp4
+- artifacts/videos/1764550290510-registro-exitoso.mp4
+- artifacts/videos/1764550309450-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.mp4
+- artifacts/videos/1764550342937-registro-exitoso.mp4
+- artifacts/videos/1764550361862-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.mp4
+- artifacts/videos/1764550402425-registro-exitoso.mp4
+- artifacts/videos/1764550421331-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.mp4
+- artifacts/videos/1764550455153-registro-exitoso.mp4
+- artifacts/videos/1764550473556-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.mp4
+- artifacts/videos/1764550510245-Campos_obligatorios_vac_os_muestran_errores.mp4
+- artifacts/videos/1764550539901-Email_inv_lido_y_T_rminos_no_aceptados.mp4
+- artifacts/videos/1764550561120-T_rminos_y_condiciones_no_aceptados_Paso_2_.mp4
+- artifacts/videos/1764550619780-Campos_obligatorios_vac_os_muestran_errores.mp4
+- artifacts/videos/1764550649438-Email_inv_lido_y_T_rminos_no_aceptados.mp4
+- artifacts/videos/1764550670988-T_rminos_y_condiciones_no_aceptados_Paso_2_.mp4
+- artifacts/videos/1764550711845-registro-exitoso.mp4
+- artifacts/videos/1764550716256-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.mp4
+
+## Logs
+- artifacts/logs/1764546720899-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764546737696-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764546755285-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764546756800-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764546770071-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764546783010-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764546806034-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764546822489-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764546823917-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764546825332-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764546838305-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764546852396-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764546976433-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764546994194-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764546995810-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547008075-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547021803-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547036307-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764547053949-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547055499-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547068188-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547081314-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547267266-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764547284983-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547286526-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547299732-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547313368-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547327612-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764547345286-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547346814-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764547359872-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547373538-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764547945394-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764547998455-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548038866-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548078285-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548119938-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548194965-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764548243540-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548277721-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548300325-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548322865-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548579212-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764548626842-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548675018-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548699079-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548723147-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548745151-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764548793264-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548840670-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764548864724-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764548888752-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764549157352-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764549185428-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764549233830-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764549282458-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764549303694-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764549331790-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764549379897-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764549427819-No_acepta_términos_en_paso_3.log
+- artifacts/logs/1764549810160-Campos_obligatorios_vacíos_muestran_errores.log
+- artifacts/logs/1764549839882-Email_inválido_y_Términos_no_aceptados.log
+- artifacts/logs/1764549860994-Términos_y_condiciones_no_aceptados_(Paso_2).log
+- artifacts/logs/1764550198426-Campos_obligatorios_vac_os_muestran_errores.log
+- artifacts/logs/1764550227562-Email_inv_lido_y_T_rminos_no_aceptados.log
+- artifacts/logs/1764550248910-T_rminos_y_condiciones_no_aceptados_Paso_2_.log
+- artifacts/logs/1764550309397-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.log
+- artifacts/logs/1764550361802-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.log
+- artifacts/logs/1764550421284-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.log
+- artifacts/logs/1764550473512-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.log
+- artifacts/logs/1764550509376-Campos_obligatorios_vac_os_muestran_errores.log
+- artifacts/logs/1764550538974-Email_inv_lido_y_T_rminos_no_aceptados.log
+- artifacts/logs/1764550560184-T_rminos_y_condiciones_no_aceptados_Paso_2_.log
+- artifacts/logs/1764550618943-Campos_obligatorios_vac_os_muestran_errores.log
+- artifacts/logs/1764550648493-Email_inv_lido_y_T_rminos_no_aceptados.log
+- artifacts/logs/1764550670109-T_rminos_y_condiciones_no_aceptados_Paso_2_.log
+- artifacts/logs/1764550716217-Valida_campos_y_env_a_datos_a_services_apexrest_ClientManagement_v2_.log

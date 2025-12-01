@@ -4,6 +4,8 @@ package com.terpel.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +13,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.terpel.app.R;
@@ -29,27 +33,49 @@ public final class FragmentOtpBinding implements ViewBinding {
   public final MaterialButton btnVerify;
 
   @NonNull
+  public final MaterialCardView contentCard;
+
+  @NonNull
+  public final ImageView headerImage;
+
+  @NonNull
   public final TextInputEditText otpEditText;
 
   @NonNull
   public final TextInputLayout otpInputLayout;
 
   @NonNull
+  public final TextView otpSubtitle;
+
+  @NonNull
   public final TextView otpTitle;
+
+  @NonNull
+  public final CircularProgressIndicator progressOtp;
+
+  @NonNull
+  public final LinearLayout stepIndicator;
 
   @NonNull
   public final TextView timerText;
 
   private FragmentOtpBinding(@NonNull ConstraintLayout rootView, @NonNull MaterialButton btnResend,
-      @NonNull MaterialButton btnVerify, @NonNull TextInputEditText otpEditText,
-      @NonNull TextInputLayout otpInputLayout, @NonNull TextView otpTitle,
-      @NonNull TextView timerText) {
+      @NonNull MaterialButton btnVerify, @NonNull MaterialCardView contentCard,
+      @NonNull ImageView headerImage, @NonNull TextInputEditText otpEditText,
+      @NonNull TextInputLayout otpInputLayout, @NonNull TextView otpSubtitle,
+      @NonNull TextView otpTitle, @NonNull CircularProgressIndicator progressOtp,
+      @NonNull LinearLayout stepIndicator, @NonNull TextView timerText) {
     this.rootView = rootView;
     this.btnResend = btnResend;
     this.btnVerify = btnVerify;
+    this.contentCard = contentCard;
+    this.headerImage = headerImage;
     this.otpEditText = otpEditText;
     this.otpInputLayout = otpInputLayout;
+    this.otpSubtitle = otpSubtitle;
     this.otpTitle = otpTitle;
+    this.progressOtp = progressOtp;
+    this.stepIndicator = stepIndicator;
     this.timerText = timerText;
   }
 
@@ -92,6 +118,18 @@ public final class FragmentOtpBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.contentCard;
+      MaterialCardView contentCard = ViewBindings.findChildViewById(rootView, id);
+      if (contentCard == null) {
+        break missingId;
+      }
+
+      id = R.id.headerImage;
+      ImageView headerImage = ViewBindings.findChildViewById(rootView, id);
+      if (headerImage == null) {
+        break missingId;
+      }
+
       id = R.id.otpEditText;
       TextInputEditText otpEditText = ViewBindings.findChildViewById(rootView, id);
       if (otpEditText == null) {
@@ -104,9 +142,27 @@ public final class FragmentOtpBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.otpSubtitle;
+      TextView otpSubtitle = ViewBindings.findChildViewById(rootView, id);
+      if (otpSubtitle == null) {
+        break missingId;
+      }
+
       id = R.id.otpTitle;
       TextView otpTitle = ViewBindings.findChildViewById(rootView, id);
       if (otpTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.progressOtp;
+      CircularProgressIndicator progressOtp = ViewBindings.findChildViewById(rootView, id);
+      if (progressOtp == null) {
+        break missingId;
+      }
+
+      id = R.id.stepIndicator;
+      LinearLayout stepIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (stepIndicator == null) {
         break missingId;
       }
 
@@ -116,8 +172,9 @@ public final class FragmentOtpBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentOtpBinding((ConstraintLayout) rootView, btnResend, btnVerify, otpEditText,
-          otpInputLayout, otpTitle, timerText);
+      return new FragmentOtpBinding((ConstraintLayout) rootView, btnResend, btnVerify, contentCard,
+          headerImage, otpEditText, otpInputLayout, otpSubtitle, otpTitle, progressOtp,
+          stepIndicator, timerText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

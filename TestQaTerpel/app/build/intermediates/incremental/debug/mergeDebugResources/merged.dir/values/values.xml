@@ -5,6 +5,13 @@
         <item>CE</item>
         <item>PA</item>
     </string-array>
+    <string-array name="vehicle_types">
+        <item>Moto</item>
+        <item>Taxi</item>
+        <item>Bus</item>
+        <item>Particular</item>
+        <item>Camión</item>
+    </string-array>
     <attr format="enum" name="animateCircleAngleTo">
         <enum name="bestChoice" value="0"/>
         <enum name="closest" value="1"/>

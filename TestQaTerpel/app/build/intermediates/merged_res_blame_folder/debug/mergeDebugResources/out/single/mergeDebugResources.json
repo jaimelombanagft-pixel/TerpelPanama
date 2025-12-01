@@ -48,6 +48,10 @@
         "source": "com.terpel.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.terpel.app-debug-50:/xml_network_security_config.xml.flat",
+        "source": "com.terpel.app-main-52:/xml/network_security_config.xml"
+    },
+    {
         "merged": "com.terpel.app-debug-50:/layout_item_welcome_page.xml.flat",
         "source": "com.terpel.app-main-52:/layout/item_welcome_page.xml"
     },

@@ -5,6 +5,13 @@
         <item>CE</item>
         <item>PA</item>
     </string-array>
+    <string-array name="vehicle_types">
+        <item>Moto</item>
+        <item>Taxi</item>
+        <item>Bus</item>
+        <item>Particular</item>
+        <item>Camión</item>
+    </string-array>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="terpel_dark_blue">#263238</color>
     <color name="terpel_light_gray">#F2F4F7</color>

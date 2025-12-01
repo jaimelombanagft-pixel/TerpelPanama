@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.terpel.app.ui.register.RegisterViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-28T19:01:32.562Z" hostname="MacBook-Pro-de-Jaime-2.local" time="0.008">
-  <properties/>
-  <testcase name="invalid_email_sets_error" classname="com.terpel.app.ui.register.RegisterViewModelTest" time="0.008"/>
-  <testcase name="confirm_mismatch_sets_error" classname="com.terpel.app.ui.register.RegisterViewModelTest" time="0.0"/>
-  <testcase name="valid_form_is_valid" classname="com.terpel.app.ui.register.RegisterViewModelTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

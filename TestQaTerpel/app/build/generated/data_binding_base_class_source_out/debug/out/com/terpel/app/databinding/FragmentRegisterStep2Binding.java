@@ -4,6 +4,7 @@ package com.terpel.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,6 @@ import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
-import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.terpel.app.R;
@@ -29,10 +29,22 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
   public final MaterialButton btnRegisterFinal;
 
   @NonNull
-  public final TextInputEditText confirmEditTextStep2;
+  public final MaterialButton btnValidateReferral;
 
   @NonNull
-  public final TextInputLayout confirmInputLayoutStep2;
+  public final MaterialCheckBox checkBus;
+
+  @NonNull
+  public final MaterialCheckBox checkCamion;
+
+  @NonNull
+  public final MaterialCheckBox checkMoto;
+
+  @NonNull
+  public final MaterialCheckBox checkParticular;
+
+  @NonNull
+  public final MaterialCheckBox checkTaxi;
 
   @NonNull
   public final TextInputEditText documentEditText;
@@ -41,22 +53,31 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
   public final TextInputLayout documentInputLayout;
 
   @NonNull
-  public final TextInputEditText passwordEditTextStep2;
+  public final TextInputEditText emailEditText;
 
   @NonNull
-  public final TextInputLayout passwordInputLayoutStep2;
+  public final TextInputLayout emailInputLayout;
 
   @NonNull
-  public final LinearProgressIndicator passwordStrengthIndicator;
+  public final TextInputEditText lastNameEditText;
 
   @NonNull
-  public final TextView passwordStrengthLabel;
+  public final TextInputLayout lastNameInputLayout;
+
+  @NonNull
+  public final TextInputEditText nameEditText;
+
+  @NonNull
+  public final TextInputLayout nameInputLayout;
 
   @NonNull
   public final TextInputEditText phoneEditText;
 
   @NonNull
   public final TextInputLayout phoneInputLayout;
+
+  @NonNull
+  public final TextView policyTitle;
 
   @NonNull
   public final CircularProgressIndicator progressStep2;
@@ -68,39 +89,75 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
   public final TextInputLayout referralInputLayout;
 
   @NonNull
+  public final LinearLayout referralLayout;
+
+  @NonNull
+  public final TextView stepSubtitle;
+
+  @NonNull
   public final TextView stepTitle;
 
   @NonNull
   public final MaterialCheckBox termsCheck;
 
+  @NonNull
+  public final LinearLayout vehicleRow1;
+
+  @NonNull
+  public final LinearLayout vehicleRow2;
+
+  @NonNull
+  public final LinearLayout vehicleRow3;
+
+  @NonNull
+  public final TextView vehicleTypeLabel;
+
   private FragmentRegisterStep2Binding(@NonNull NestedScrollView rootView,
-      @NonNull MaterialButton btnRegisterFinal, @NonNull TextInputEditText confirmEditTextStep2,
-      @NonNull TextInputLayout confirmInputLayoutStep2, @NonNull TextInputEditText documentEditText,
-      @NonNull TextInputLayout documentInputLayout,
-      @NonNull TextInputEditText passwordEditTextStep2,
-      @NonNull TextInputLayout passwordInputLayoutStep2,
-      @NonNull LinearProgressIndicator passwordStrengthIndicator,
-      @NonNull TextView passwordStrengthLabel, @NonNull TextInputEditText phoneEditText,
-      @NonNull TextInputLayout phoneInputLayout, @NonNull CircularProgressIndicator progressStep2,
-      @NonNull TextInputEditText referralEditText, @NonNull TextInputLayout referralInputLayout,
-      @NonNull TextView stepTitle, @NonNull MaterialCheckBox termsCheck) {
+      @NonNull MaterialButton btnRegisterFinal, @NonNull MaterialButton btnValidateReferral,
+      @NonNull MaterialCheckBox checkBus, @NonNull MaterialCheckBox checkCamion,
+      @NonNull MaterialCheckBox checkMoto, @NonNull MaterialCheckBox checkParticular,
+      @NonNull MaterialCheckBox checkTaxi, @NonNull TextInputEditText documentEditText,
+      @NonNull TextInputLayout documentInputLayout, @NonNull TextInputEditText emailEditText,
+      @NonNull TextInputLayout emailInputLayout, @NonNull TextInputEditText lastNameEditText,
+      @NonNull TextInputLayout lastNameInputLayout, @NonNull TextInputEditText nameEditText,
+      @NonNull TextInputLayout nameInputLayout, @NonNull TextInputEditText phoneEditText,
+      @NonNull TextInputLayout phoneInputLayout, @NonNull TextView policyTitle,
+      @NonNull CircularProgressIndicator progressStep2, @NonNull TextInputEditText referralEditText,
+      @NonNull TextInputLayout referralInputLayout, @NonNull LinearLayout referralLayout,
+      @NonNull TextView stepSubtitle, @NonNull TextView stepTitle,
+      @NonNull MaterialCheckBox termsCheck, @NonNull LinearLayout vehicleRow1,
+      @NonNull LinearLayout vehicleRow2, @NonNull LinearLayout vehicleRow3,
+      @NonNull TextView vehicleTypeLabel) {
     this.rootView = rootView;
     this.btnRegisterFinal = btnRegisterFinal;
-    this.confirmEditTextStep2 = confirmEditTextStep2;
-    this.confirmInputLayoutStep2 = confirmInputLayoutStep2;
+    this.btnValidateReferral = btnValidateReferral;
+    this.checkBus = checkBus;
+    this.checkCamion = checkCamion;
+    this.checkMoto = checkMoto;
+    this.checkParticular = checkParticular;
+    this.checkTaxi = checkTaxi;
     this.documentEditText = documentEditText;
     this.documentInputLayout = documentInputLayout;
-    this.passwordEditTextStep2 = passwordEditTextStep2;
-    this.passwordInputLayoutStep2 = passwordInputLayoutStep2;
-    this.passwordStrengthIndicator = passwordStrengthIndicator;
-    this.passwordStrengthLabel = passwordStrengthLabel;
+    this.emailEditText = emailEditText;
+    this.emailInputLayout = emailInputLayout;
+    this.lastNameEditText = lastNameEditText;
+    this.lastNameInputLayout = lastNameInputLayout;
+    this.nameEditText = nameEditText;
+    this.nameInputLayout = nameInputLayout;
     this.phoneEditText = phoneEditText;
     this.phoneInputLayout = phoneInputLayout;
+    this.policyTitle = policyTitle;
     this.progressStep2 = progressStep2;
     this.referralEditText = referralEditText;
     this.referralInputLayout = referralInputLayout;
+    this.referralLayout = referralLayout;
+    this.stepSubtitle = stepSubtitle;
     this.stepTitle = stepTitle;
     this.termsCheck = termsCheck;
+    this.vehicleRow1 = vehicleRow1;
+    this.vehicleRow2 = vehicleRow2;
+    this.vehicleRow3 = vehicleRow3;
+    this.vehicleTypeLabel = vehicleTypeLabel;
   }
 
   @Override
@@ -136,15 +193,39 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.confirmEditTextStep2;
-      TextInputEditText confirmEditTextStep2 = ViewBindings.findChildViewById(rootView, id);
-      if (confirmEditTextStep2 == null) {
+      id = R.id.btnValidateReferral;
+      MaterialButton btnValidateReferral = ViewBindings.findChildViewById(rootView, id);
+      if (btnValidateReferral == null) {
         break missingId;
       }
 
-      id = R.id.confirmInputLayoutStep2;
-      TextInputLayout confirmInputLayoutStep2 = ViewBindings.findChildViewById(rootView, id);
-      if (confirmInputLayoutStep2 == null) {
+      id = R.id.checkBus;
+      MaterialCheckBox checkBus = ViewBindings.findChildViewById(rootView, id);
+      if (checkBus == null) {
+        break missingId;
+      }
+
+      id = R.id.checkCamion;
+      MaterialCheckBox checkCamion = ViewBindings.findChildViewById(rootView, id);
+      if (checkCamion == null) {
+        break missingId;
+      }
+
+      id = R.id.checkMoto;
+      MaterialCheckBox checkMoto = ViewBindings.findChildViewById(rootView, id);
+      if (checkMoto == null) {
+        break missingId;
+      }
+
+      id = R.id.checkParticular;
+      MaterialCheckBox checkParticular = ViewBindings.findChildViewById(rootView, id);
+      if (checkParticular == null) {
+        break missingId;
+      }
+
+      id = R.id.checkTaxi;
+      MaterialCheckBox checkTaxi = ViewBindings.findChildViewById(rootView, id);
+      if (checkTaxi == null) {
         break missingId;
       }
 
@@ -160,27 +241,39 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.passwordEditTextStep2;
-      TextInputEditText passwordEditTextStep2 = ViewBindings.findChildViewById(rootView, id);
-      if (passwordEditTextStep2 == null) {
+      id = R.id.emailEditText;
+      TextInputEditText emailEditText = ViewBindings.findChildViewById(rootView, id);
+      if (emailEditText == null) {
         break missingId;
       }
 
-      id = R.id.passwordInputLayoutStep2;
-      TextInputLayout passwordInputLayoutStep2 = ViewBindings.findChildViewById(rootView, id);
-      if (passwordInputLayoutStep2 == null) {
+      id = R.id.emailInputLayout;
+      TextInputLayout emailInputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (emailInputLayout == null) {
         break missingId;
       }
 
-      id = R.id.passwordStrengthIndicator;
-      LinearProgressIndicator passwordStrengthIndicator = ViewBindings.findChildViewById(rootView, id);
-      if (passwordStrengthIndicator == null) {
+      id = R.id.lastNameEditText;
+      TextInputEditText lastNameEditText = ViewBindings.findChildViewById(rootView, id);
+      if (lastNameEditText == null) {
         break missingId;
       }
 
-      id = R.id.passwordStrengthLabel;
-      TextView passwordStrengthLabel = ViewBindings.findChildViewById(rootView, id);
-      if (passwordStrengthLabel == null) {
+      id = R.id.lastNameInputLayout;
+      TextInputLayout lastNameInputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (lastNameInputLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.nameEditText;
+      TextInputEditText nameEditText = ViewBindings.findChildViewById(rootView, id);
+      if (nameEditText == null) {
+        break missingId;
+      }
+
+      id = R.id.nameInputLayout;
+      TextInputLayout nameInputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (nameInputLayout == null) {
         break missingId;
       }
 
@@ -193,6 +286,12 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
       id = R.id.phoneInputLayout;
       TextInputLayout phoneInputLayout = ViewBindings.findChildViewById(rootView, id);
       if (phoneInputLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.policyTitle;
+      TextView policyTitle = ViewBindings.findChildViewById(rootView, id);
+      if (policyTitle == null) {
         break missingId;
       }
 
@@ -214,6 +313,18 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.referralLayout;
+      LinearLayout referralLayout = ViewBindings.findChildViewById(rootView, id);
+      if (referralLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.stepSubtitle;
+      TextView stepSubtitle = ViewBindings.findChildViewById(rootView, id);
+      if (stepSubtitle == null) {
+        break missingId;
+      }
+
       id = R.id.stepTitle;
       TextView stepTitle = ViewBindings.findChildViewById(rootView, id);
       if (stepTitle == null) {
@@ -226,11 +337,37 @@ public final class FragmentRegisterStep2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.vehicleRow1;
+      LinearLayout vehicleRow1 = ViewBindings.findChildViewById(rootView, id);
+      if (vehicleRow1 == null) {
+        break missingId;
+      }
+
+      id = R.id.vehicleRow2;
+      LinearLayout vehicleRow2 = ViewBindings.findChildViewById(rootView, id);
+      if (vehicleRow2 == null) {
+        break missingId;
+      }
+
+      id = R.id.vehicleRow3;
+      LinearLayout vehicleRow3 = ViewBindings.findChildViewById(rootView, id);
+      if (vehicleRow3 == null) {
+        break missingId;
+      }
+
+      id = R.id.vehicleTypeLabel;
+      TextView vehicleTypeLabel = ViewBindings.findChildViewById(rootView, id);
+      if (vehicleTypeLabel == null) {
+        break missingId;
+      }
+
       return new FragmentRegisterStep2Binding((NestedScrollView) rootView, btnRegisterFinal,
-          confirmEditTextStep2, confirmInputLayoutStep2, documentEditText, documentInputLayout,
-          passwordEditTextStep2, passwordInputLayoutStep2, passwordStrengthIndicator,
-          passwordStrengthLabel, phoneEditText, phoneInputLayout, progressStep2, referralEditText,
-          referralInputLayout, stepTitle, termsCheck);
+          btnValidateReferral, checkBus, checkCamion, checkMoto, checkParticular, checkTaxi,
+          documentEditText, documentInputLayout, emailEditText, emailInputLayout, lastNameEditText,
+          lastNameInputLayout, nameEditText, nameInputLayout, phoneEditText, phoneInputLayout,
+          policyTitle, progressStep2, referralEditText, referralInputLayout, referralLayout,
+          stepSubtitle, stepTitle, termsCheck, vehicleRow1, vehicleRow2, vehicleRow3,
+          vehicleTypeLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

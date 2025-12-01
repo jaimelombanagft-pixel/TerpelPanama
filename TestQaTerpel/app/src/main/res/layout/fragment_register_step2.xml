@@ -20,13 +20,25 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
+        <TextView
+            android:id="@+id/stepSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Diligencia los siguientes datos."
+            android:textColor="@color/terpel_dark_blue"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/stepTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/documentInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Número de documento"
             app:boxBackgroundMode="filled"
-            app:layout_constraintTop_toBottomOf="@id/stepTitle"
+            app:layout_constraintTop_toBottomOf="@id/stepSubtitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp">
@@ -34,7 +46,8 @@
                 android:id="@+id/documentEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:enabled="false"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -51,98 +64,203 @@
                 android:id="@+id/phoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:enabled="false"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/referralInputLayout"
+            android:id="@+id/nameInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Código referido (opcional)"
+            android:hint="Nombre *"
             app:boxBackgroundMode="filled"
             app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/referralEditText"
+                android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordInputLayoutStep2"
+            android:id="@+id/lastNameInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
+            android:hint="Apellido *"
             app:boxBackgroundMode="filled"
-            app:endIconMode="password_toggle"
-            app:layout_constraintTop_toBottomOf="@id/referralInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/nameInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordEditTextStep2"
+                android:id="@+id/lastNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/confirmInputLayoutStep2"
+            android:id="@+id/emailInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Confirmar contraseña"
+            android:hint="Correo electrónico *"
             app:boxBackgroundMode="filled"
-            app:endIconMode="password_toggle"
-            app:layout_constraintTop_toBottomOf="@id/passwordInputLayoutStep2"
+            app:layout_constraintTop_toBottomOf="@id/lastNameInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/confirmEditTextStep2"
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/passwordStrengthLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/password_strength"
-            android:textColor="@color/terpel_dark_blue"
-            app:layout_constraintTop_toBottomOf="@id/confirmInputLayoutStep2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="8dp"/>
-
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/passwordStrengthIndicator"
+        <LinearLayout
+            android:id="@+id/referralLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/passwordStrengthLabel"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="4dp"
-            app:indicatorColor="@color/terpel_red"
-            app:trackColor="@color/terpel_light_gray"/>
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/referralInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Código referido"
+                app:boxBackgroundMode="filled"
+                android:layout_marginEnd="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/referralEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnValidateReferral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Validar"
+                android:backgroundTint="@color/terpel_light_gray"
+                android:textColor="@color/terpel_dark_blue"
+                android:layout_gravity="bottom"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vehicleTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Vehículo"
+            android:textColor="@color/terpel_dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/referralLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/vehicleRow1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/vehicleTypeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkMoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moto"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkParticular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Particular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vehicleRow2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/vehicleRow1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkTaxi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Taxi"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkCamion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Camión"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vehicleRow3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/vehicleRow2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bus"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/policyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conoce nuestras políticas"
+            android:textColor="@color/terpel_dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/vehicleRow3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/termsCheck"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Autorizo el tratamiento de datos y términos"
-            app:layout_constraintTop_toBottomOf="@id/passwordStrengthIndicator"
+            android:text="Autorizo el tratamiento de datos personales y términos y condiciones"
+            app:layout_constraintTop_toBottomOf="@id/policyTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="8dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegisterFinal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/continue_label"
+            android:text="Siguiente"
             android:enabled="false"
             android:backgroundTint="@color/terpel_red"
             android:textColor="@color/white"
